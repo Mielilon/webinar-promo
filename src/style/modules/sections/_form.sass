@@ -1,0 +1,89 @@
+.form
+  padding: 100px 0 220px 0
+  background-color: $black
+  color: $white
+  
+  &__contact
+    flex: 0 0 670px
+    padding-right: 80px
+
+  &__desc
+    color: $grey-8
+    margin-top: 20px
+    margin-bottom: 60px
+
+  &__announce-block
+    margin: 8px 0 0 0
+    font-weight: 200
+    color: #999
+    font-size: 14px
+
+  &__submit
+    margin-top: 80px
+
+  &__info
+    position: absolute
+    padding-top: 32px
+    display: flex
+    flex-direction: column
+    right: 0
+    top: 0
+    width: 530px
+
+  &__onwebinar
+    margin-top: 160px
+
+  &__agreement
+    margin-top: 40px
+    width: 100%
+
+  &__reasons
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -16px
+    .list-item
+      margin: 40px 16px 0
+      width: calc(100% / 2 - 32px)
+
+  @include respond-to(xl)
+    &__contact
+      flex: unset
+      padding-right: 0
+      max-width: 720px
+
+    &__info
+      position: unset
+      padding-top: 0
+      width: 100%
+
+    &__desc
+      margin-bottom: 40px
+
+    &__onwebinar
+      margin-top: 40px
+
+    &__reasons
+      margin-bottom: 80px
+
+    &__submit
+      margin-top: 40px
+    
+    &__agreement
+      margin-top: 32px
+
+  @include respond-to(sm)
+    padding: 120px 0 80px 0
+    &__reasons
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 52px
+      .list-item
+        width: 100%
+        margin-left: 0
+        margin-top: 12px
+        margin-bottom: 8px
+    &__submit
+      margin-top: 32px
+
+
+

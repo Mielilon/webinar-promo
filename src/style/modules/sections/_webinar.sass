@@ -1,0 +1,44 @@
+@import '../../variables'
+
+.webinar
+  padding: 120px 0 140px 0
+  
+  &__title
+    width: 100%
+
+  &__desc
+    margin-top: 16px
+    color: $grey-8
+    max-width: 580px
+    margin-bottom: 10px
+
+  &__column
+    margin-top: 90px
+    width: calc(100% / 2 - 32px)
+    display: flex
+    flex-direction: column
+    &:first-child
+      margin-right: 64px
+
+    h5
+      margin-bottom: 14px
+
+    .list-item 
+      margin: 10px 0
+
+  &__action
+    margin-top: 60px
+
+  @include respond-to(lg)
+    &__column
+      margin-top: 38px
+      width: 100%
+      max-width: 568px
+      &:first-child
+        margin-right: 0
+
+    &__action
+      margin-top: 40px
+
+  @include respond-to(md)
+    padding: 60px 0 80px 0 

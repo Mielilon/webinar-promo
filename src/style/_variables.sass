@@ -1,0 +1,37 @@
+// Variables and mixins
+
+$black: #222222
+$white: #fff
+
+$grey-c: #ccc 
+$grey-a: #aaa 
+$grey-9: #999 
+$grey-8: #888 
+$grey-6: #666
+
+$bg: #EDEFF2
+
+$primary: #EB7A1E
+$primary-d-1: #D17228
+
+$small: 560px
+$medium: 740px
+$large: 980px
+$xlarge: 1280px
+
+@mixin respond-to($media)
+  @if $media == sm
+    @media only screen and (max-width: $small - 1)
+      @content
+
+  @else if $media == md
+    @media only screen and (max-width: $medium - 1)
+      @content
+
+  @else if $media == lg
+    @media only screen and (max-width: $large - 1)
+      @content
+
+  @else if $media == xl
+    @media only screen and (max-width: $xlarge - 1)
+      @content

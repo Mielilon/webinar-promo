@@ -1,0 +1,24 @@
+// layout
+
+.l
+  &-container
+    width: 100%
+    position: relative
+    max-width: 1200px
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    @include respond-to(xl)
+      max-width: 900px
+    @include respond-to(lg)
+      max-width: 660px
+    @include respond-to(md)
+      max-width: 480px
+    @include respond-to(sm)
+      max-width: calc(100% - 32px)
+  &-row
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+  &-spacer
+    flex: 1 1 auto

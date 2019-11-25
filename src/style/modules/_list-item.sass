@@ -1,0 +1,38 @@
+@import '../variables'
+
+.list-item
+  display: flex
+  font-size: 18px
+  &:before
+    content: ""
+    height: 1px
+    min-width: 16px
+    display: inline-block
+    background-color: $black
+    margin-right: 12px
+    margin-top: 13px
+
+  &--lg
+    font-size: 22px
+    &:before
+      margin-top: 16px
+
+  &--white
+    &:before
+      background-color: $white
+
+  &--grey-c
+    &:before
+      background-color: $grey-c
+
+  @include respond-to(md)
+    font-size: 16px
+    &:before
+      margin-top: 11px
+      min-width: 12px
+      margin-right: 8px
+
+    &--lg
+      font-size: 18px
+      &:before
+        margin-top: 13px

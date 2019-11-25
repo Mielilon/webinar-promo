@@ -1,0 +1,142 @@
+.hat
+  background-image: url(/img/hat-bg.jpg)
+  background-size: cover
+  background-position: center center
+  background-color: #212934
+  min-height: 100vh
+  display: flex
+  align-items: center
+  padding: 180px 0 80px 0
+  color: $white
+
+  &__offer
+    width: 690px
+
+  &__about
+    width: 375px
+    margin-top: 24px
+
+  &__title
+    margin-top: 20px
+    margin-bottom: 16px
+
+  &__offer-desc
+    color: $grey-c
+    &-md
+      display: none
+
+  &__action
+    margin-top: 80px
+    display: flex
+    align-items: center
+    &-play
+      display: none
+
+  &__date
+    margin-left: 40px
+    *
+      display: block
+  
+  &__video-preview
+    width: 375px
+    height: 250px
+    border-radius: 4px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center center
+      border-radius: 4px
+  
+  &__video-play
+    position: absolute
+    height: 100px
+    width: 100px
+    left: calc(50% - 50px)
+    top: calc(50% - 50px)
+    transition: .25s ease
+
+
+  &__video
+    position: relative
+    cursor: pointer
+    &:hover
+      .hat__video-play
+        transform: scale(1.1)
+
+  &__info-list
+    margin-top: 60px
+    .list-item
+      margin-top: 20px
+
+  @include respond-to(xl)
+    padding-top: 120px 
+
+    &__offer
+      max-width: 690px
+
+    &__about
+      width: 100%
+      margin-top: 80px
+
+    &__about
+      display: flex
+      align-items: flex-start
+
+    &__info-list
+      margin-top: 40px
+      margin-left: 40px
+      br
+        display: none
+
+  @include respond-to(lg)
+    &__action
+      margin-top: 40px
+
+    &__offer-desc
+      max-width: 420px
+
+    &__video-preview
+      width: 300px
+      height: 200px
+
+    &__info-list
+      margin-top: 0px
+      margin-left: 32px
+
+  @include respond-to(md)
+    padding-top: 60px
+
+    &__about
+      display: none
+
+    &__offer-desc
+      display: none
+      &-md
+        display: block
+      .list-item
+        margin: 8px 0
+
+    &__action
+      flex-wrap: wrap
+      &-play
+        display: block
+        height: 48px
+        width: 48px
+        margin-left: 24px
+      &-btn
+        width: 100%
+        display: flex
+        align-items: center
+    
+    &__date
+      margin-left: 0
+      margin-top: 24px
+      .capture 
+        display: none
+
+  @include respond-to(sm)
+    padding-top: 40px
+
+    
+    

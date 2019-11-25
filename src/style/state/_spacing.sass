@@ -1,0 +1,28 @@
+
+@for $i from 0 through 12
+  
+  .ma-#{$i}
+    margin: 4px * $i !important
+  .mx-#{$i}
+    margin-left: 4px * $i !important
+    margin-right: 4px * $i !important
+  .my-#{$i}
+    margin-top: 4px * $i !important
+    margin-bottom: 4px * $i !important
+  @each $name, $direction in (ml, left), (mt, top), (mr, right), (mb, bottom)
+    .#{$name}-#{$i}
+      margin-#{$direction}: 4px * $i !important
+
+@for $i from 0 through 12
+  @include respond-to(sm)
+    .ma-#{$i}-sm
+      margin: 4px * $i !important
+    .mx-#{$i}-sm
+      margin-left: 4px * $i !important
+      margin-right: 4px * $i !important
+    .my-#{$i}-sm
+      margin-top: 4px * $i !important
+      margin-bottom: 4px * $i !important
+    @each $name, $direction in (ml, left), (mt, top), (mr, right), (mb, bottom)
+      .#{$name}-#{$i}-sm
+        margin-#{$direction}: 4px * $i !important

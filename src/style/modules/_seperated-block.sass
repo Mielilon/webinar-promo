@@ -1,0 +1,19 @@
+@import '../variables'
+
+.seperated-block
+  max-width: 300px
+  p
+    font-size: 20px
+    line-height: 1.5
+    font-weight: 200
+  &:before
+    content: ""
+    display: block
+    width: 60px
+    height: 8px
+    background-color: $primary
+    margin-bottom: 20px
+
+  @include respond-to(md)
+    p
+      font-size: 18px

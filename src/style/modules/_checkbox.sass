@@ -1,0 +1,57 @@
+@import '../variables'
+
+.checkbox
+  display: inline-flex
+  position: relative
+  padding-left: 32px
+  cursor: pointer
+  font-size: 22px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  align-items: center
+  align-items: flex-start
+
+  input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+
+  &__name
+    font-size: 14px
+    line-height: 1.5
+    font-weight: 200
+    max-width: 340px
+    color: $grey-9
+
+  &__checkmark
+    font-size: 14px
+    position: absolute
+    top: 0
+    left: 0
+    height: 20px
+    width: 20px
+    background-color: transparent
+    border: 1px solid $grey-9
+    transition: .25s ease
+    &:after 
+      content: ""
+      position: absolute
+      display: none
+
+  input:checked ~ &__checkmark:after
+    display: block
+
+  &__checkmark:after
+    left: 5px
+    top: 2px
+    width: 5px
+    height: 10px
+    border: solid $grey-9
+    border-width: 0 2px 2px 0
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)

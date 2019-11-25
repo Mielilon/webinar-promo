@@ -1,0 +1,16 @@
+@import '../variables'
+
+.capture
+  font-size: 14px
+  color: $primary
+  letter-spacing: 0.15em
+  line-height: 1.3
+  text-transform: uppercase
+  font-weight: 200
+  &--lg
+    font-size: 18px
+
+  @include respond-to(sm)
+    font-size: 13px
+    &--lg
+      font-size: 13px

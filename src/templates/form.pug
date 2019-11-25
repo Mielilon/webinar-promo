@@ -1,0 +1,30 @@
+.form
+  .l-container
+    .l-row
+      form.form__contact
+        h2 Оставьте заявку на участие в вебинаре
+        p.form__desc Отправьте заявку и мы вышлем вам пригласительное письмо на почту
+
+        .form__info
+          span.capture.capture--lg.mb-3 Дата начала
+          h4 25.11.2019 в 19:00 (МСК)
+
+          span.capture.capture--lg.form__onwebinar На вебинаре вы:
+
+          .form__reasons
+            p.list-item.list-item--white Откроете для себя актуальные методики анализа и взыскания 
+            p.list-item.list-item--white Узнаете "подводные камни" и о том, как не надо делать
+            p.list-item.list-item--white Получите подарок – ценный сюрприз в конце вебинара
+            p.list-item.list-item--white Найдете новых партнеров и единомышленников
+
+        .text-field
+          input(type="text" placeholder="Ваш Email" name="email")
+          span.text-field__hint
+
+        a.btn.form__submit Отправить заявку
+        p.form__announce-block
+
+        label.checkbox.form__agreement
+          span.checkbox__name Я согласен на обработку моих персональных данных в соответствии с <a href="#" class="underlined">условиями</a>
+          input(type="checkbox" @input="change" name="agreement" checked)
+          span.checkbox__checkmark

@@ -1,0 +1,81 @@
+@import '../../variables'
+
+.host
+  padding: 100px 0 140px 0
+  background-color: $bg
+
+  &__info
+    flex: 0 0 670px
+    max-width: 100%
+
+  &__owner
+    margin-top: 100px
+    margin-bottom: 12px
+    &-avatar
+      display: none
+
+  &__blocks-wrapper
+    margin: 0 -32px
+    display: flex
+    flex-wrap: wrap
+
+    .seperated-block
+      margin-top: 48px
+      margin-left: 32px
+      margin-right: 32px
+      width: 280px
+
+  &__portrait
+    flex: 1
+    position: relative
+    img
+      position: absolute
+      left: 100px
+      height: 654px
+      width: 366px
+      bottom: -140px
+
+  @include respond-to(xl)
+    padding-bottom: 120px
+    &__portrait
+      img
+        left: 60px
+        height: 535px
+        width: 300px
+        bottom: -120px
+    
+  @include respond-to(lg)
+    padding-bottom: 120px
+
+    &__portrait
+      display: none
+
+    &__owner
+      display: flex
+      align-items: center
+      margin-top: 60px
+      &-avatar
+        display: inline-block
+        border-radius: 50%
+        height: 80px
+        width: 80px
+        margin-right: 16px
+
+  @include respond-to(md)
+    padding: 60px 0 80px 0 
+
+    &__info
+      flex: unset
+    
+    &__owner
+      margin-top: 60px
+
+    &__blocks-wrapper
+      margin: 0
+      flex-direction: column
+
+      .seperated-block
+        margin-left: 0
+        margin-right: 0
+        margin-top: 40px
+        width: 280px

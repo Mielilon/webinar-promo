@@ -1,0 +1,29 @@
+.reasons
+  padding: 100px 0 140px 0
+  background-color: $bg
+
+  &__title
+    max-width: 600px
+
+  &__wrapper
+    margin: 60px -32px 0
+    width: auto
+
+    .seperated-block
+      width: calc(100% / 4 - 64px)
+      margin: 40px 32px 0 
+
+  @include respond-to(xl)
+    &__wrapper
+
+      .seperated-block
+        width: calc(100% / 2 - 64px)
+
+  @include respond-to(md)
+    padding: 60px 0 80px 0
+    &__wrapper
+      margin: 8px 0 0 0
+
+      .seperated-block
+        width: 100%
+        margin: 40px 0 0 0 
